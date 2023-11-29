@@ -50,6 +50,7 @@ var zh = {
     "ROUTER": "路由",
     "MANAGE": "管理",
     "CONFIG": "配置",
+    "MONITOR_CONFIG": "监控配置",
     "SEND_MSG": "发送消息",
     "RESET_CUS_OFFSET": "重置消费位点",
     "SKIP_MESSAGE_ACCUMULATE":"跳过堆积",

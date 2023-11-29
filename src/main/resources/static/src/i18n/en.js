@@ -50,6 +50,7 @@ var en = {
     "ROUTER": "Router",
     "MANAGE": "Manage",
     "CONFIG": "Config",
+    "MONITOR_CONFIG": "Monitor Config",
     "SEND_MSG": "Send Massage",
     "RESET_CUS_OFFSET": "Reset Consumer Offset",
     "DELETE": "Delete",
