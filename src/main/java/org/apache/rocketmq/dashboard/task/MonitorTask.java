@@ -18,6 +18,7 @@ package org.apache.rocketmq.dashboard.task;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Maps;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.rocketmq.dashboard.config.RMQNotifyConfigure;
 import org.apache.rocketmq.dashboard.model.ConsumerMonitorConfig;
 import org.apache.rocketmq.dashboard.model.GroupConsumeInfo;
@@ -112,7 +113,7 @@ public class MonitorTask {
             RMQNotifyConfigure.MailConfig mail = notifyConfig.getMail();
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom(mail.getFrom()); //邮件发送人
-            message.setTo(mail.getTo()); //邮件接收人
+            message.setTo(StringUtils.split(mail.getTo(), ",")); //邮件接收人
             message.setSubject("【告警】RocketMQ"); //邮件主题
             message.setText(text); //邮件内容
             mailSender.send(message); //发送邮件
